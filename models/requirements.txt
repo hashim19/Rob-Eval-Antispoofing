@@ -1,0 +1,9 @@
+numpy
+torch
+torchvision
+yaml
+tensorboardX
+scikit-learn
+matplotlib
+soundfile
+joblib
