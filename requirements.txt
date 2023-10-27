@@ -7,3 +7,5 @@ scikit-learn
 matplotlib
 soundfile
 joblib
+pandas
+shutil
