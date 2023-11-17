@@ -47,26 +47,12 @@ cm_scores_file =  CM_SCOREFILE
 # Replace ASV scores with organizers' scores or provide score file as the second argument.
 asv_score_file =  ASV_SCOREFILE
 
-# Fix tandem detection cost function (t-DCF) parameters
-Pspoof = 0.05
-cost_model = {
-    'Pspoof': Pspoof,  # Prior probability of a spoofing attack
-    'Ptar': (1 - Pspoof) * 0.99,  # Prior probability of target speaker
-    'Pnon': (1 - Pspoof) * 0.01,  # Prior probability of nontarget speaker
-    'Cmiss_asv': 1,  # Cost of ASV system falsely rejecting target speaker
-    'Cfa_asv': 10,  # Cost of ASV system falsely accepting nontarget speaker
-    'Cmiss_cm': 1,  # Cost of CM system falsely rejecting target speaker
-    'Cfa_cm': 10,  # Cost of CM system falsely accepting spoof
-}
-
-
 # Load CM scores
 cm_data = np.genfromtxt(cm_scores_file, dtype=str)
 cm_utt_id = cm_data[:, 0]
 cm_sources = cm_data[:, 1]
 cm_keys = cm_data[:, 2]
 cm_scores = cm_data[:, 3].astype(float)
-
 
 # Extract bona fide (real bonafide) and spoof scores from the CM scores
 bona_cm = cm_scores[cm_keys == 'bonafide']
