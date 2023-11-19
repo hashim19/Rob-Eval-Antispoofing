@@ -33,19 +33,10 @@ def compute_eer(target_scores, nontarget_scores):
 
 args = sys.argv
 
-if 'dev'==args[1]:
-    
-    ASV_SCOREFILE = 'tDCF_python/ASV_scores/ASVspoof2019.LA.asv.dev.gi.trl.scores.txt'
-    CM_SCOREFILE = 'dev_CM_add_scores_file.txt'
-    
-elif 'Eval'==args[1]:
-    ASV_SCOREFILE = 'C:/Users/400743/Documents/Research - Anti_spoofing/Rob-Eval-Antispoofing/txtfiles/ASVspoof2019.LA.cm.eval.trl.txt'
-    CM_SCOREFILE = 'RawGAT_ST_cat_LA_eval_CM_scores_RR_mod1.txt'
+CM_SCOREFILE = 'RawGAT_ST_cat_LA_eval_CM_scores_RR_mod1.txt'
      
 # Replace CM scores with your own scores or provide score file as the first argument.
 cm_scores_file =  CM_SCOREFILE
-# Replace ASV scores with organizers' scores or provide score file as the second argument.
-asv_score_file =  ASV_SCOREFILE
 
 # Load CM scores
 cm_data = np.genfromtxt(cm_scores_file, dtype=str)
