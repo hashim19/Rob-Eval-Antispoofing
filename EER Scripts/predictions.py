@@ -17,5 +17,5 @@ def evaluate_classifications(file_path):
     print(f"Accuracy: {accuracy:.2f}%")
 
 
-file_path = 'C:/Users/400743/Documents/Research - Anti_spoofing/RawGAT-ST.txt'
+file_path = 'C:/Users/aesal/OneDrive/Documents/Rob-Antispoofing/Rob-Eval-Antispoofing/EER Scripts/predictions.txt'
 evaluate_classifications(file_path)

@@ -33,7 +33,7 @@ def compute_eer(target_scores, nontarget_scores):
 
 args = sys.argv
 
-CM_SCOREFILE = 'RawGAT_ST_cat_LA_eval_CM_scores_RR_mod1.txt'
+CM_SCOREFILE = 'Rawnet2_LA_eval_CM_scores_RR_mod3.txt'
      
 # Replace CM scores with your own scores or provide score file as the first argument.
 cm_scores_file =  CM_SCOREFILE
